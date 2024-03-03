@@ -8,10 +8,18 @@ jobs:
         steps:
           - name: ACTION
             uses: actions/checkout@v4         
-          - name: welcome message
-            run: echo "message"
-          - name: List Files
-            run: ls 
-          - name: show data
-            run: cat README.md
+          - name: LIST and READ files
+            run: |
+              echo "message"
+              ls-ltra
+              cat README.md
+          - name: Generate ASCII Artwork 
+            run: cosway -f "Akash" >> akash.txt
+                  
+
+
+#          - name: List Files
+#            run: ls 
+#          - name: show data
+#            run: cat README.md
 
