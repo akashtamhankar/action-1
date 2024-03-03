@@ -14,7 +14,7 @@ jobs:
               ls-ltra
               cat README.md
           - name: Generate ASCII Artwork 
-            run: cosway -f "Akash" >> akash.txt
+            run: cosway -f akash "Akash" >> akash.txt
                   
 
 
