@@ -11,7 +11,7 @@ jobs:
           - name: LIST and READ files
             run: |
               echo "message"
-              ls-ltra
+              ls -ltra
               cat README.md
           - name: Generate ASCII Artwork 
             run: cosway -f akash "Akash" >> akash.txt
