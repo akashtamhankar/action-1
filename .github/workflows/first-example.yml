@@ -22,7 +22,7 @@ jobs:
       runs-on: ubuntu:latest
       steps:
         - name: Linux Kernel Version
-          run: uanme -r 
+          run: uname -r 
 
 
 
