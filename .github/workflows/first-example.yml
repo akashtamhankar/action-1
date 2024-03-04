@@ -40,4 +40,4 @@ jobs:
           with:
            name: os-text-file
         - name: show file
-           run: cat os-info.txt
+          run: cat os-info.txt
