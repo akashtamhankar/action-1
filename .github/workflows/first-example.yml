@@ -13,13 +13,16 @@ jobs:
               echo "message"
               ls -ltra
               cat README.md
-          - name: Generate ASCII Artwork 
-            run: cosway -f akash "Akash" >> akash.txt
-                  
+    second_job:
+      runs-on: ubuntu-latest
+      steps:
+        - name: whoami
+          run: whoami
+    third_job:
+      runs-on: ubuntu:latest
+      steps:
+        - name: Linux Kernel Version
+          run: uanme -r 
 
 
-#          - name: List Files
-#            run: ls 
-#          - name: show data
-#            run: cat README.md
 
