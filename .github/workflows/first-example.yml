@@ -14,15 +14,11 @@ jobs:
               ls -ltra
               cat README.md
     second_job:
+      needs: first_job
       runs-on: ubuntu-latest
       steps:
         - name: whoami
           run: whoami
-    third_job:
-      runs-on: ubuntu:latest
-      steps:
-        - name: OS-information
-          run: cat /etc/os-release
 
 
 
