@@ -10,7 +10,8 @@ jobs:
               run: docker info
             - name: Run images
               run: docker run hello-world
-    deploy-on-ubuntu:
+
+    deploy-on-windows:
         runs-on: windows-latest
         steps:
             - name: Echo docker details
