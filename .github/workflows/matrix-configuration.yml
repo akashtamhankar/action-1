@@ -3,20 +3,17 @@ on:
     push:
     workflow_dispatch:
 jobs:
-    deploy-on-ubuntu:
-        runs-on: ubuntu-latest
+    deploy:
+        strategy:
+            matrix:
+              os: [ubuntu-22.04, ubuntu-20.04]
+              images: [hello-world, alpine]
+        runs-on: ${{matrix.os}}
         steps:
             - name: Echo docker details
               run: docker info
-            - name: Run images
-              run: docker run hello-world
+            - name: Run images on ${{matrix.os}}
+              run: docker run ${{matrix.images}}
 
-    deploy-on-windows:
-        runs-on: windows-latest
-        steps:
-            - name: Echo docker details
-              run: docker info
-            - name: Run images
-              run: docker run hello-world
             
                       
